@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>数据展示</h2>
+<table>
+    <thead>
+    <tr>
+        <th>产品名称</th>
+        <th>价格</th>
+        <th>时间点</th>
+        <th>数据</th>
+    </tr>
+    </thead>
+    <tbody th:remove="all-but-first">
+    <tr th:each="product : ${productList}">
+        <td th:text="${product.name}">Red chair</td>
+        <td th:text="${product.code}">￥350</td>
+        <td th:text="${#dates.format(product.thedate, 'dd-MM-yyyy HH:mm:ss')}">2018-02-20</td>
+        <td th:text="${product.data}">￥350</td>
+    </tr>
+    <tr>
+        <td>White table</td>
+        <td>￥200</td>
+        <td>2018-04-10</td>
+        <td>White table</td>
+    </tr>
+    <tr>
+        <td>Reb table</td>
+        <td>￥200</td>
+        <td>2018-02-20</td>
+        <td>White table</td>
+    </tr>
+    <tr>
+        <td>Blue table</td>
+        <td>￥200</td>
+        <td>2018-02-20</td>
+        <td>White table</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
