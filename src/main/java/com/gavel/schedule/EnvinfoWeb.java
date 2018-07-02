@@ -281,8 +281,8 @@ public class EnvinfoWeb {
 
     Map<String, String> formData = new HashMap<String, String>();
     formData.put("op", "login");
-    formData.put("item.usrName", "陕西龙门钢铁有限责任公司");
-    formData.put("item.usrPassword", "5182359");
+    formData.put("item.usrName", "");
+    formData.put("item.usrPassword", "");
 
     String responseText = Http.post(CONTEXT_PATH + "/loginAndRegister.do", formData);
 
